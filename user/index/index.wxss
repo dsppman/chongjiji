@@ -1,0 +1,131 @@
+.view {
+    height: 50px;
+    width: 50px;
+    background-color: var(--theme);
+    border-radius: 0 0 50% 50%;
+    transform: scale(20);
+}
+
+.a {
+  position: absolute;
+  top: -300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+}
+
+.bar1 {
+  height: 110px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.bar1 .avatar {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.bar1 .user {
+  color: white;
+  margin-left: 15px;
+  flex: 1;
+}
+
+.bar1 .user .name {
+  font-size: large;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.bar1 .user .sub {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: small;
+}
+
+.bar1 .card {
+  padding-top: 10px;
+}
+
+.bar2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+  background-color: white;
+  box-shadow: 0 5px 15px -10px rgba(128, 128, 128, 0.5);
+  height: 100px;
+  border-radius: 15px;
+}
+
+.bar2 .item {
+  padding: 10px;
+  font-size: small;
+  color: #808080;
+  text-align: center;
+}
+
+.bar2 .item .num {
+  font-weight: bold;
+  font-size: large;
+  color: #333333;
+}
+
+.label {
+  font-weight: bold;
+  margin-left: 20px;
+  padding-top: 10px;
+}
+
+.bar3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 15px 20px;
+  background-color: white;
+  box-shadow: 0 3px 20px -10px rgba(128, 128, 128, 0.5);
+  height: 100px;
+  border-radius: 15px;
+}
+
+.bar3 .item {
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.bar3 .item .ico {
+  height: 30px;
+  width: 30px;
+}
+
+.bar4 {
+  margin: 15px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+}
+
+.bar4 .item {
+  height: 100px;
+  background-color: rgb(220, 220, 220);
+  border-radius: 15px;
+}
+
+.list {
+  margin: 20px;
+}
+
+.list .item {
+  padding: 15px 0;
+  border-bottom: solid 1px rgba(220, 220, 220, 0.3);
+  line-height: 20px;
+}
+
+.list .item .ico {
+  margin-right: 15px;
+}

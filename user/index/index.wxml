@@ -1,0 +1,60 @@
+<!--pages/user/index/index.wxml-->
+<scroll-view scroll-y class="page-content">
+  <view class="a">
+    <view class="view" />
+  </view>
+  <view class="container">
+    <view class="bar1">
+      <view class="avatar"></view>
+      <view class="user">
+        <view class="name">六月飞霜</view>
+        <view class="sub">珍惜现在 音节未来</view>
+      </view>
+      <view class="card"><iconfont type="saoyisao" size="25px" color="white" /></view>
+    </view>
+    <view class="bar2">
+      <view class="item">
+        <view class="num">63</view>
+        粉丝
+      </view>
+      <view class="item">
+        <view class="num">286</view>
+        动态
+      </view>
+      <view class="item">
+        <view class="num">59</view>
+        关注
+      </view>
+    </view>
+    <view class="label">我的订单</view>
+    <view class="bar3">
+      <view class="item">
+        <image class="ico" src="/images/2.png"></image>
+        <view>待付款</view>
+      </view>
+      <view class="item">
+        <image class="ico" src="/images/1.png"></image>
+        <view>待发货</view>
+      </view>
+      <view class="item">
+        <image class="ico" src="/images/3.png"></image>
+        <view>待收货</view>
+      </view>
+      <view class="item">
+        <image class="ico" src="/images/4.png"></image>
+        <view>待评价</view>
+      </view>
+    </view>
+    <view class="label">我的爱宠</view>
+    <view class="bar4">
+      <view class="item"></view>
+      <view class="item"></view>
+    </view>
+    <view class="list">
+      <view class="item"><iconfont type="favorite" class="ico" size="20px" />我的收藏</view>
+      <view class="item"><iconfont type="comment" class="ico" size="20px" />我的评论</view>
+      <view class="item"><iconfont type="share" class="ico" size="20px" />我的分享</view>
+    </view>
+  </view>
+</scroll-view>
+<view class="page-tabbar page-ipx-safe-area"></view>

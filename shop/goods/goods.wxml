@@ -1,0 +1,31 @@
+<!--shop/goods/goods.wxml-->
+<view class="top-bar">
+  <view class="item {{topBarState}}" style="padding-top: {{navHeight}}px;opacity: {{topBarOpacity}}">
+    <view class="back"><iconfont type="back" size="22px" /></view>
+    <view class="list">
+      <view class="tab {{active === index ? 'active': ''}}" bindtap="switchTab" data-index="{{index}}" wx:for="{{navList}}" wx:key="index">{{item.title}}</view>
+    </view>
+    <view class="back"></view>
+  </view>
+</view>
+<view class="buy-bar">
+  <view class="item {{buyBarState}}">
+    <view class="list">
+      <view class="ico"><iconfont type="share" /></view>
+      <view class="ico"><iconfont type="kefu" /></view>
+      <view class="ico"><iconfont type="shopping-cart" /></view>
+      <view class="fl"></view>
+      <view class="cart-btn">加入购物车</view>
+      <view class="buy-btn">立即购买</view>
+    </view>
+    <view class="ipx-safe-area"></view>
+  </view>
+</view>
+
+<view class="content">
+  <view class="banner"></view>
+  <view id="推荐" class="demo bg-red"></view>
+  <view id="详情" class="demo bg-yellow"></view>
+  <view id="售后" class="demo bg-blue"></view>
+</view>
+

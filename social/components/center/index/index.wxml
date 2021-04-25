@@ -1,0 +1,70 @@
+<!--pages/social/components/center/index/index.wxml-->
+<view class="top-bar">
+  <view class="left"></view>
+  <scroll-view scroll-x class="tab">
+    <view class="list">
+      <view 
+      class="item {{active === index ? 'active' : ''}}" 
+      bindtap="switchTab" 
+      wx:for="{{navBarList}}" 
+      wx:key="index" 
+      data-index="{{index}}">
+        {{item.title}}
+      </view>
+    </view>
+  </scroll-view>
+  <view class="right"></view>
+</view>
+<scroll-view 
+scroll-y 
+refresher-enabled 
+scroll-with-animation
+enable-back-to-top="{{isActive}}"
+refresher-triggered="{{refreshState}}"
+bindrefresherrefresh="onRefresh"
+bindrefresherrestore="abortRefresh"
+bindrefresherabort="abortRefresh"
+bindscrolltolower="onLoadMore"
+scroll-top="{{pos}}"
+class="container">
+  <view class="list">
+    <view class="item" wx:for="{{list}}" wx:key="index">
+      <view class="head">
+        <image class="avatar" src="{{item.avatar}}" mode="aspectFill" />
+        <view class="username">{{item.username}}</view>
+        <view class="fl"></view>
+        <view class="share"><iconfont type="share" /> 分享</view>
+      </view>
+      <view class="body">
+        <view class="intro">{{item.intro}}</view>
+        <view class="intro-pic" wx:if="{{item.pic}}" mode="aspectFit">
+          <block wx:if="{{item.pic.url.length === 1}}">
+            <image class="pic {{item.pic.mode}}" style="width:{{item.pic.width}}px;" src="{{item.pic.url[0]}}" mode="widthFix" />
+          </block>
+          <block wx:else>
+            <image class="pic group" src="{{item.pic.url[0]}}" mode="aspectFill" />
+            <image class="pic group" src="{{item.pic.url[1]}}" mode="aspectFill" />
+            <image class="pic group" wx:if="{{item.pic.url[2]}}" src="{{item.pic.url[2]}}" mode="aspectFill" />
+          </block>
+        </view>
+        <view class="intro-video" wx:elif="{{item.video}}">
+          <image class="video" wx:if="{{index != videoId}}" bindtap="onVideoPlay" data-index="{{index}}" src="{{item.video.thumb}}"></image>
+          <video class="video" wx:else src="{{item.video.url}}" play-btn-position="center" autoplay></video>
+        </view>
+      </view>
+      <view class="foot">
+        <view class="view">{{item.viewTotal}} 浏览</view>
+        <view class="fl"></view>
+        <view class="comment">
+          <iconfont type="comment" size="16px" /> {{item.commentTotal}}
+        </view>
+        <view class="like">
+          <iconfont type="dianzan" size="16px" /> {{item.likeTotal}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="load-more">
+    <view class="{{loadState}}"></view>
+  </view>
+</scroll-view>

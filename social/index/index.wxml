@@ -1,0 +1,36 @@
+<!--pages/social/index/index.wxml-->
+<view class="bg-white search" style="padding-top: {{navHeight}}px">
+  <navigator hover-class="none" url="/pages/search/search" class="item">
+    <icon type="search" />
+    <view>大家都想知道“谁比我帅”</view>
+  </navigator>
+</view>
+<view class="bg-white nav-bar">
+  <view class="tab-list">
+    <view 
+    wx:for="{{list}}"
+    wx:key="index"
+    class="tab {{active === index ? 'active' : '' }}" 
+    bindtap="changeNavTab" 
+    data-index="{{index}}">
+      {{item.title}}
+    </view>
+  </view>
+  <view 
+  class="tab-line" 
+  style="transform: translateX({{pos}}px);" />
+</view>
+<swiper current="{{active}}" bindchange="changeNavTab" class="page-content bg-xhs">
+  <swiper-item>
+    <topic-index is-active="{{active === 0}}" />
+  </swiper-item>
+  <swiper-item>
+    <center-index is-active="{{active === 1}}" />
+  </swiper-item>
+  <swiper-item>
+    <local-index is-active="{{active === 2}}" />
+  </swiper-item>
+</swiper>
+
+<view class="page-tabbar page-ipx-safe-area" />
+

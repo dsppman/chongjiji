@@ -1,0 +1,26 @@
+<!--pages/cart/cart.wxml-->
+<scroll-view scroll-y class="page-content bg-xhs">
+  <cart />
+  <view class="mr"></view>
+  <view class="recommend-bar bg-white">
+    <view class="label">你可能感兴趣</view>
+    <view class="list">
+      <view class="first">
+        <view class="pic"></view>
+        <view class="title">AirPower 平价代替？开合妙恋，三十分钟续航，价格感人</view>
+      </view>
+      <view class="item" wx:for="{{'111111111'}}">
+        <view class="info">
+          <view class="title">这里是测试，断货王香水。大牌调香实力打造，想为高级，男女通用</view>
+          <view class="tags">
+            <view class="tag">大牌调香</view>
+            <view class="tag">价格美丽</view>
+          </view>
+          <view class="view">888 人浏览 · 999 人点赞</view>
+        </view>
+        <view class="pic"></view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<view class="page-tabbar page-ipx-safe-area"></view>

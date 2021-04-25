@@ -1,0 +1,113 @@
+/* pages/search/search.wxss */
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px 15px;
+  height: 52px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 5px 10px -10px rgba(128, 128, 128, 0.2);
+  display: flex;
+  background-color: white;
+}
+
+.top-bar .search {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  background-color: rgb(241, 241, 241);
+  border-radius: 30px;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.top-bar .search .input {
+  flex: 1;
+  margin-left: 5px;
+  height: 100%;
+}
+
+.top-bar .search .clear {
+  height: 100%;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-bar .button {
+  padding: 4px 0 0 15px;
+  height: 100%;
+  color: gray;
+}
+
+.container {
+  margin-top: 52px;
+}
+
+.container .panel {
+  font-size: small;
+}
+
+.container .panel .pd {
+  padding: 18px 15px;
+}
+
+.container .panel .label {
+  font-weight: bold;
+}
+
+.container .panel .list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+}
+
+.container .panel .list .tab {
+  padding: 8px 12px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 20px;
+  margin: 0 15px 10px 0;
+}
+
+.container .panel .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+}
+
+.container .panel .history .head .clear {
+  padding: 6px;
+}
+
+.container .key-list {
+  padding: 0 10px 0 25px;
+}
+
+.container .key-list .item {
+  padding: 15px 10px;
+  border-bottom: 1px solid rgba(180, 180, 180, 0.2);
+}
+
+.container .content .nav-bar {
+  display: flex;
+  justify-content: center;
+}
+
+.container .content .nav-bar .item {
+  padding: 12px 15px 8px;
+}
+
+.container .content .nav-bar .active {
+  font-weight: bold;
+  color: black;
+}
+
+.container .content .nav-bar .item .line {
+  margin-top: 3px;
+  height: 2px;
+  border-radius: 10px;
+}

@@ -1,0 +1,87 @@
+/* pages/info/components/stream-list/stream-list.wxss */
+
+
+.stream {
+  height: 100%;
+}
+
+.stream-list {
+  padding: 3px;
+  display: flex;
+}
+
+.stream-list .item-list {
+  width: 50%;
+  margin: 3px;
+}
+
+.stream-list .item-list .item {
+  background-color: white;
+  border-radius: 5px;
+  overflow: auto;
+  margin-bottom: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stream-list .item-list .item .cover-pic {
+  width: 100%;
+}
+
+.stream-list .item-list .item .title {
+  padding: 5px 10px 0 10px;
+  font-weight: 600;
+  font-size: small;
+}
+
+.stream-list .item-list .item .user {
+  margin: 10px 0;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: smaller;
+}
+
+.stream-list .item-list .item .avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.stream-list .item-list .item .ico {
+  margin-right: 5px;
+}
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+}
+
+
+/* 动画 */
+.loading {
+  width: 25px;
+  height: 25px;
+  background-color: grey;
+  animation: sk-plane 1.2s infinite ease-in-out; 
+}
+
+.finish {
+  width: 25px;
+  height: 25px;
+  background-color: blue;
+}
+
+@keyframes sk-plane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg); 
+  } 50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); 
+  } 100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); 
+  } 
+}

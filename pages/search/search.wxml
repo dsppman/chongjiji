@@ -1,0 +1,67 @@
+<!--pages/search/search.wxml-->
+<view class="top-bar">
+  <view class="search">
+    <icon type="search" color="#c0c0c0" />
+    <input 
+    class="input" 
+    focus
+    confirm-type="search" 
+    placeholder="{{tips}}" 
+    value="{{value}}" 
+    bindinput="inputValue"
+    bindfocus="focusValue"
+    bindconfirm="searchValue" />
+    <view class="clear" wx:if="{{value.length > 0}}" bindtap="clearValue" >
+      <icon type="clear" color="#c0c0c0" size="18px" />
+    </view>
+  </view>
+  <view class="button" wx:if="{{searchState}}" bindtap="searchValue">
+    搜索
+  </view>
+</view>
+
+<view class="container">
+  <block wx:if="{{searchState}}">
+    <view class="panel" wx:if="{{value.length === 0}}">
+      <view class="history pd">
+        <view class="head">
+          <view class="label">历史记录</view>
+          <view class="clear"><iconfont type="saoyisao" size="17px" /></view>
+        </view>
+        <view class="list">
+          <view class="tab">复活节滑蛋大赛</view>
+        </view>
+      </view>
+      <view class="hot pd">
+        <view class="head">
+          <view class="label">热门搜索</view>
+        </view>
+        <view class="list">
+          <view class="tab"><iconfont type="saoyisao" /> 复活节滑蛋大赛</view>
+          <view class="tab"><iconfont type="saoyisao" /> 青春有你2排名</view>
+          <view class="tab">城野医生面霜</view>
+          <view class="tab">爽肤水学生</view>
+          <view class="tab">亲亲</view>
+          <view class="tab">金渐层猫</view>
+          <view class="tab">王泡芙</view>
+          <view class="tab">成熟恋爱</view>
+          <view class="tab">宠物鸭</view>
+        </view>
+      </view>
+    </view>
+    <view class="key-list" wx:elif="{{value.length > 0}}">
+      <view class="item" wx:for="{{keyList}}" wx:key="index" bindtap="switchValue" data-index="{{index}}" >{{item}}</view>
+    </view>
+  </block>
+  <view class="content" wx:else>
+    <view class="nav-bar bg-white">
+      <view class="item {{index === active ? 'active': ''}}" wx:for="{{navList}}" wx:key="index" data-index="{{index}}" bindtap="switchTab">
+        {{item.title}}
+        <view wx:if="{{index === active}}" class="line bg-theme" />
+      </view>
+    </view>
+    <view wx:for="{{list}}" wx:key="index">
+      
+    </view>
+  </view>
+</view>

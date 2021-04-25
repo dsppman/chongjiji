@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "stream-list": "../components/stream-list/stream-list",
+    "hot-list": "../components/hot-list/hot-list"
+  },
+  "navigationStyle": "custom"
+}

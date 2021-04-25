@@ -1,0 +1,54 @@
+<!--pages/info/index/index.wxml-->
+<view class="bg-white" style="height:{{menuButtonRect.top}}px"></view>
+<view class="bg-white info-index-search">
+  <navigator hover-class="none" url="/pages/search/search" class="search">
+    <icon type="search" />
+    <view>大家都想知道“谁比我帅”</view>
+  </navigator>
+</view>
+<view class="bg-white info-index-nav-bar">
+  <view class="nav-bar">
+    <view class="tab-list">
+      <view 
+      wx:for="{{list}}"
+      wx:key="index"
+      class="tab {{active === index ? 'active' : '' }}" 
+      bindtap="changeNavTab" 
+      data-index="{{index}}">
+        {{item.title}}
+      </view>
+    </view>
+    <view 
+    class="tab-line bg-gradual-blue" 
+    style="transform: translateX({{pos}}px);" />
+  </view>
+
+  <scroll-view 
+  scroll-x
+  scroll-with-animation
+  scroll-left="{{itemPos}}"
+  class="item-bar">
+    <view class="tab-list">
+      <view 
+      wx:for="{{list[active].item.list}}" 
+      wx:key="index"
+      bindtap="changeItemTab"
+      class="tab {{list[active].item.active === index ? 'active' : '' }}"
+      data-index="{{index}}">
+        {{item.title}}
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<swiper current="{{active}}" bindchange="changeNavTab" class="page-body bg-xhs">
+  <swiper-item class="bg-red">
+    <hot-list></hot-list>
+  </swiper-item>
+  <swiper-item class="bg-xhs">
+    <stream-list active="{{active === 1}}" tab="{{list[1].item.active}}"></stream-list>
+  </swiper-item>
+  <swiper-item class="bg-blue">
+  </swiper-item>
+</swiper>
+
+<view class="page-tabbar page-ipx-safe-area" />

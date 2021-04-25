@@ -1,0 +1,229 @@
+/* pages/shop/index/index.wxss */
+
+.mrtop {
+  margin-top: 20px;
+}
+
+.label {
+  color: black;
+  font-weight: bold;
+  margin-right: 5px;
+  white-space: nowrap;
+}
+
+.search {
+  height: 52px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+.search .item {
+  height: 100%;
+  display: flex;
+  background-color: rgb(241, 241, 241);
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+}
+
+.about-bar {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  font-size: small;
+  white-space:nowrap;
+  color: #808080;
+}
+
+.about-bar .line {
+  width: 1px;
+  background-color: rgb(220, 220, 220);
+}
+
+.vip-bar {
+  padding: 0 0 30px 25px;
+  background-image: linear-gradient(to bottom,white 40%, rgb(254, 105, 124) 40%);
+  box-shadow: 0 8px 10px -10px rgba(254, 105, 124, 0.7);
+}
+
+.vip-bar .item {
+  height: 150px;
+  background-color: white;
+  border-radius: 15px 0 0 15px;
+  box-shadow: -5px -5px 15px -15px #808080;
+}
+
+.hot-bar {
+  padding: 15px;
+}
+
+.hot-bar .list {
+  padding-top: 15px;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 15px;
+}
+
+.hot-bar .list .first {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  height: 300px;
+}
+
+.hot-bar .list .item {
+  box-shadow: 5px 5px 10px -10px #808080;
+  background-color: rgb(220, 220, 220);
+  border-radius: 10px;
+}
+
+.brand-bar {
+  padding: 15px;
+}
+
+.brand-bar .list {
+  padding-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.brand-bar .list .item {
+  box-shadow: 5px 5px 10px -10px #808080;
+  background-color: rgb(220, 220, 220);
+  border-radius: 10px;
+  height: 60px;
+}
+
+.nav-bar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  box-shadow: 0 3px 10px -10px rgba(128, 128, 128, 0.8);
+  white-space: nowrap;
+}
+
+.nav-bar .item {
+  padding: 10px;
+}
+
+.nav-bar .item .line {
+  position: relative;
+  top: 4px;
+  height: 2px;
+  background-color: #fe697c;
+  border-radius: 10px;
+}
+
+.nav-bar .active {
+  color: #fe697c;
+  font-weight: bold;
+}
+
+.content {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+}
+
+.content .list {
+  display: grid;
+  row-gap: 10px;
+}
+
+.content .list .item {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 3px 3px 10px -10px rgba(128, 128, 128, 0.8);
+  overflow: hidden;
+}
+
+.content .list .item .pic {
+  height: 170px;
+  background-color: rgb(220, 220, 220);
+}
+
+.content .list .item .info {
+  padding: 10px;
+}
+
+.content .list .item .title {
+  color: black;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.content .list .item .sub {
+  margin-top: 3px;
+  font-size: small;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.content .list .item .tags {
+  margin-top: 5px;
+  font-size: x-small;
+  color: white;
+  display: flex;
+}
+
+.content .list .item .tags .tag {
+  padding: 1px 3px;
+  border-radius: 5px;
+}
+
+.content .list .item .price {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.content .list .item .price .current {
+  color: var(--red);
+  padding: 2px 5px;
+  font-weight: bold;
+  font-size: large;
+}
+
+.content .list .item .price .current::before {
+  content: "￥";
+  font-size: small;
+}
+
+.content .list .item .price .original {
+  font-size: small;
+  text-decoration: line-through;
+}
+
+.content .list .item .price .original::before {
+  content: "￥";
+}
+
+.back-top {
+  position: fixed;
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  box-shadow: 3px 3px 12px -7px rgba(128, 128, 128, 0.8);
+  border-radius: 50%;
+  bottom: calc(70px + constant(safe-area-inset-bottom));
+  bottom: calc(70px + env(safe-area-inset-bottom));
+  right: 17px;
+  text-align: center;
+  padding-top: 5px;
+  box-sizing: border-box;
+  color: #333333;
+}
+
+.none {
+  display: none;
+}

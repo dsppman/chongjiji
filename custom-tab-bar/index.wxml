@@ -1,0 +1,46 @@
+<!--custom-tab-bar/index.wxml-->
+<view class="tab-bar">
+  <view wx:for="{{list}}" wx:key="index" class="item" bindtap="switchTab" data-index="{{index}}">
+    <iconfont wx:if="{{item.isPublishBtn}}"  type="{{item.icon}}" class="publish" size="22px" color="white" />
+    <iconfont wx:else type="{{active === index ? item.selectedIcon : item.icon}}" size="27px" class="{{active === index ? 'active' : ''}}" />
+  </view>
+</view>
+<cover-view class="mask {{maskAnt}}" wx:if="{{maskState}}" bindtap="closeMask">
+  <cover-view class="content">
+    <cover-view class="list">
+      <cover-view class="btn">
+        <cover-view class="ico1">
+          <cover-image src="/images/5.png" />
+        </cover-view>
+        <cover-view>发表话题</cover-view>
+      </cover-view>
+      <cover-view class="btn">
+        <cover-view class="ico2">
+          <cover-image src="/images/6.png" />
+        </cover-view>
+        <cover-view>聊聊日常</cover-view>
+      </cover-view>
+    </cover-view>
+    <cover-view class="close"><cover-image src="/images/close.png" class="pic" /></cover-view>
+  </cover-view>
+</cover-view>
+<!-- <view class="mask {{maskAnt}}" wx:if="{{maskState}}" bindtap="closeMask">
+  <view class="content">
+    <view class="list">
+      <view class="btn">
+        <view class="ico1">
+          <iconfont type="fasong" />
+        </view>
+        发表话题
+      </view>
+      <view class="btn">
+        <view class="ico2">
+          <iconfont type="tupian1" />
+        </view>
+        聊聊日常
+      </view>
+    </view>
+    <view class="close"><iconfont type="back" size="35px" /></view>
+  </view>
+</view> -->
+

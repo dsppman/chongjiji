@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "social/index/index",
+    "shop/goods/goods",
+    "user/index/index",
+    "pages/cart/cart",
+    "shop/index/index",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "宠物手册",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "social/index/index"
+      },
+      {
+        "text": "商城",
+        "pagePath": "shop/index/index"
+      },
+      {
+        "text": "购物车",
+        "pagePath": "pages/cart/cart"
+      },
+      {
+        "text": "我",
+        "pagePath": "user/index/index"
+      }
+    ]
+  },
+  "usingComponents": {
+    "iconfont": "components/iconfont/iconfont"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

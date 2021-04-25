@@ -1,0 +1,45 @@
+<!--pages/info/components/stream-list/stream-list.wxml-->
+<scroll-view 
+scroll-y 
+refresher-enabled 
+scroll-with-animation
+enable-back-to-top="{{active}}"
+refresher-triggered="{{refreshStatus}}"
+bindrefresherrefresh="onRefresh"
+bindrefresherrestore="abortRefresh"
+bindrefresherabort="abortRefresh"
+bindscrolltolower="onLoadMore"
+scroll-top="{{pos}}"
+class="stream">
+  <view class="stream-list">
+    <view class="item-list">
+      <view class="item" wx:for="{{list1}}" wx:key="index">
+        <navigator url="{{item.url}}" hover-class="none">
+          <image class="cover-pic" src="{{item.imageUrl}}" mode='widthFix' />
+          <view class="title">{{item.title}}</view>
+        </navigator>
+        <view class="user">
+          <image class="avatar" src="{{item.avatar}}" mode='aspectFill' />
+          <view class="username">{{item.username}}</view>
+          <view class="like"><iconfont name="plus" class="ico"/>{{item.like}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="item-list">
+      <view class="item" wx:for="{{list2}}" wx:key="index">
+        <navigator url="{{item.url}}" hover-class="none">
+          <image class="cover-pic" src="{{item.imageUrl}}" mode='widthFix' />
+          <view class="title">{{item.title}}</view>
+        </navigator>
+        <view class="user">
+          <image class="avatar" src="{{item.avatar}}" mode='aspectFill' />
+          <view class="username">{{item.username}}</view>
+          <view class="like"><iconfont name="plus" class="ico"/>{{item.like}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="load-more">
+    <view class="{{loadStatus}}"></view>
+  </view>
+</scroll-view>

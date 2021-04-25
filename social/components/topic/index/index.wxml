@@ -1,0 +1,44 @@
+<!--pages/social/components/topic/index/index.wxml-->
+<scroll-view 
+scroll-y 
+refresher-enabled 
+scroll-with-animation
+enable-back-to-top="{{isActive}}"
+refresher-triggered="{{refreshState}}"
+bindrefresherrefresh="onRefresh"
+bindrefresherrestore="abortRefresh"
+bindrefresherabort="abortRefresh"
+bindscrolltolower="onLoadMore"
+class="container">
+  <swiper class="top-bar" autoplay="{{true}}" circular>
+    <swiper-item class="item">
+      <view class="ads">广告一</view>
+    </swiper-item>
+    <swiper-item class="item">
+      <view class="ads">广告二</view>
+    </swiper-item>
+    <swiper-item class="item">
+      <view class="ads">广告三</view>
+    </swiper-item>
+  </swiper>
+  <view class="content">
+    <view class="nav-bar">
+      <view class="item {{active === index ? 'active' : ''}}" bindtap="switchTab" wx:for="{{navBarList}}" wx:key="index" data-index="{{index}}">{{item.title}}</view>
+    </view>
+    <view class="list">
+      <view class="item" wx:for="{{list}}" wx:key="index">
+        <view class="title">{{item.title}}</view>
+        <view class="info">{{item.viewTotal}} 浏览 · {{item.joinTotal}} 参与</view>
+        <view class="comment">
+          <image class="avatar" src="{{item.avatar}}" /><text class="username">{{item.username}}</text>: {{item.comment}}
+        </view>
+        <view class="comment-pic" wx:if="{{item.picNum > 0}}">
+          <image class="pic {{item.picNum == 1 ? 'only': ''}}" wx:for="{{item.picList}}" wx:for-item="pic" wx:key="*this"  mode="aspectFill" src="{{pic}}" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="load-more">
+    <view class="{{loadState}}"></view>
+  </view>
+</scroll-view>

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "center-index": "../components/center/index/index",
+    "topic-index": "../components/topic/index/index",
+    "local-index": "../components/local/index/index"
+  },
+  "navigationStyle": "custom",
+  "disableScroll": true
+}

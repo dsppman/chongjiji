@@ -1,0 +1,103 @@
+<!--pages/shop/index/index.wxml-->
+
+<wxs module="tools">
+var display = false
+
+function onScroll(event, ownerInstance) {
+  var instance = ownerInstance.selectComponent('.back-top')
+  if (event.detail.scrollTop > 1000 && !display) {
+    instance.removeClass('none')
+    display = true
+  } else if (event.detail.scrollTop <= 1000 && display) {
+    display = false
+    instance.addClass('none')
+  }
+}
+
+module.exports = {
+  onScroll: onScroll
+}
+</wxs>
+
+<view class="search bg-white">
+  <navigator hover-class="none" url="/pages/search/search" class="item">
+    <icon type="search" color="#c0c0c0" />
+    <view class="input">复活节画奖大赛</view>
+  </navigator>
+</view>
+<scroll-view 
+scroll-y 
+refresher-enabled 
+scroll-with-animation
+scroll-top="{{scrollPos}}"
+bindscroll="{{tools.onScroll}}"
+class="page-content bg-white">
+  <swiper circular autoplay class="banner">
+    <swiper-item class="item bg-red">
+    </swiper-item>
+    <swiper-item class="item bg-yellow">
+    </swiper-item>
+  </swiper>
+  <view class="about-bar">
+    <view class="tab"><iconfont type="jiagebaohu" size="18px" /> 全球直采</view>
+    <view class="line"></view>
+    <view class="tab"><iconfont type="youpinlianmeng" size="18px" /> 正品保证</view>
+    <view class="line"></view>
+    <view class="tab"><iconfont type="15tianwuliyoutuihuo" size="18px"  /> 售后无忧</view>
+    <view class="line"></view>
+    <view class="tab"><iconfont type="zhengpinbaozhang" size="18px" /> 假一赔三</view>
+  
+  </view>
+  <view class="vip-bar mrtop">
+    <view class="item"></view>
+  </view>
+  <flash-sale-bar />
+  <view class="hot-bar mrtop">
+    <view class="label">精选好物</view>
+    <view class="list">
+      <view class="item first"></view>
+      <view class="item"></view>
+      <view class="item"></view>
+    </view>
+  </view>
+  <view class="brand-bar mrtop">
+    <view class="label">国际品牌</view>
+    <view class="list">
+      <view class="item" wx:for="{{'111111111'}}"></view>
+    </view>
+  </view>
+  <view class="container bg-xhs mrtop">
+    <view class="nav-bar">
+      <view class="item {{index === active ?'active' : ''}}" wx:for="{{navList}}" bindtap="switchTab" data-index="{{index}}">
+        {{item.title}}
+        <view class="line" wx:if="{{index === active}}"></view>
+      </view>
+    </view>
+    <view class="content">
+      <view class="list">
+        <view class="item" wx:for="{{'1111111111'}}">
+          <view class="pic"></view>
+        </view>
+      </view>
+      <view class="list">
+        <view class="item" wx:for="{{'1111111111'}}">
+          <view class="pic"></view>
+          <view class="info">
+            <view class="title">演示商品演示商品演示商品演示商品演示商品演示商品演示商品演示商品演示商品</view>
+            <view class="sub">演示商品演示商品演示商品演示商品演示商品演示商品演示商品演示商品演示商品演示商品演示商品</view>
+            <view class="tags">
+              <view class="tag bg-red">新品</view>
+            </view>
+            <view class="price">
+              <view class="current">99</view>
+              <view class="original">169</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<view class="back-top none" bindtap="backTop"><iconfont type="up" size="25px" /></view>
+
+<view class="page-tabbar page-ipx-safe-area"></view>

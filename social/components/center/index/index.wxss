@@ -1,0 +1,183 @@
+/* pages/social/components/center/index/index.wxss */
+
+.top-bar {
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.top-bar .left {
+  position: relative;
+  left: 14px;
+  width: 15px;
+  background-image: linear-gradient(to left, rgba(255,255,255,0), rgba(255,255,255,1));
+  z-index: 1;
+}
+
+.top-bar .right {
+  position: relative;
+  right: 14px;
+  width: 15px;
+  /* box-shadow: -10px 0px 5px -2px white; */
+  background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
+  z-index: 1;
+}
+
+.top-bar .tab {
+  flex: 1;
+  width: 0;
+}
+
+.top-bar .tab .list {
+  display: flex;
+  color: rgba(128, 128, 128, 0.8);
+  white-space: nowrap;
+  font-size: small;
+  align-items: center;
+  height: 100%;
+}
+
+.top-bar .tab .list .item {
+  padding: 10px;
+}
+
+.top-bar .tab .list .active {
+  font-weight: bold;
+  color: black;
+}
+
+.container {
+  height: calc(100% - 45px);
+}
+
+.container .list .item .fl {
+  flex: 1;
+}
+
+.container .list {
+  padding: 10px 10px 0 10px;
+  display: grid;
+  gap: 10px;
+}
+
+
+.container .list .item .head {
+  background-color: white;
+  margin-bottom: 1px;
+  border-radius: 10px 10px 0 0;
+  font-size: small;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 15px 12px;
+}
+
+.container .list .item .head .avatar {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.container .list .item .head .share {
+  padding: 7px 15px;
+  background-color: rgb(254, 222, 0);
+  border-radius: 30px;
+}
+
+.container .list .item .body {
+  background-color: white;
+  padding: 12px 9px;
+}
+
+.container .list .item .body .intro {
+  margin: 0 3px;
+}
+
+.container .list .item .body .intro-video {
+  margin: 10px 3px;
+}
+
+.container .list .item .body .intro-video .video {
+  border-radius: 5px;
+  width: 100%;
+  height: 60vw;
+}
+
+.container .list .item .body .intro-pic {
+  margin-top: 7px;
+  display: flex;
+}
+
+.container .list .item .body .intro-pic .pic {
+  border-radius: 5px;
+  margin: 3px;
+}
+
+.container .list .item .body .intro-pic .group {
+  width: 33%;
+  height:30vw;
+}
+
+.container .list .item .body .intro-pic .normal {
+  max-width: 65%;
+}
+
+.container .list .item .body .intro-pic .long {
+  max-width: 50%;
+}
+
+.container .list .item .body .intro-pic .longer {
+  max-width: 33%;
+}
+
+.container .list .item .foot {
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  padding: 7px 12px 12px 12px;
+  display: flex;
+  font-size: small;
+}
+
+.container .list .item .foot .view {
+  padding: 7px;
+  color: rgb(128, 128, 128);
+}
+
+.container .list .item .foot .comment {
+  padding: 7px;
+}
+
+.container .list .item .foot .like {
+  margin-left: 7px;
+  padding: 7px;
+}
+
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+}
+
+
+/* 动画 */
+.loading {
+  width: 25px;
+  height: 25px;
+  background-color: grey;
+  animation: sk-plane 1.2s infinite ease-in-out;
+}
+
+@keyframes sk-plane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg); 
+  } 50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); 
+  } 100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); 
+  } 
+}

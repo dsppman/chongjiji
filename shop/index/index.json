@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "flash-sale-bar": "../components/flash-sale-bar/flash-sale-bar"
+  },
+  "disableScroll": true
+}

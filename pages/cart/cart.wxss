@@ -1,0 +1,83 @@
+/* pages/cart/cart.wxss */
+
+.mr {
+  margin-bottom: 20px;
+}
+
+.recommend-bar {
+  padding: 12px;
+}
+
+.recommend-bar .label {
+  font-weight: bold;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.recommend-bar .list {
+  display: grid;
+  row-gap: 15px;
+}
+
+.recommend-bar .first {
+  position: relative;
+}
+
+.recommend-bar .list .first .pic {
+  height: 40vw;
+  width: 100%;
+  background-color: rgb(220, 220, 220);
+  border-radius: 10px;
+}
+
+.recommend-bar .list .first .title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: black;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.recommend-bar .list .item {
+  display: flex;
+}
+
+.recommend-bar .list .item .pic {
+  background-color: rgb(220, 220, 220);
+  border-radius: 10px;
+  width: 32%;
+}
+
+.recommend-bar .list .item .info {
+  padding-right: 15px;
+  flex: 1;
+}
+
+.recommend-bar .list .item .title {
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  line-height: 20px;
+}
+
+.recommend-bar .list .item .tags {
+  display: flex;
+  font-size: x-small;
+  margin-bottom: 5px;
+}
+
+.recommend-bar .list .item .tags .tag {
+  padding: 0 5px;
+  border: solid 1px var(--theme);
+  color: var(--theme);
+  border-radius: 20px;
+  margin-right: 5px;
+}
+
+.recommend-bar .list .item .view {
+  font-size: small;
+}
+
+

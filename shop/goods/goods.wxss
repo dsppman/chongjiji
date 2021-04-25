@@ -1,0 +1,104 @@
+/* shop/goods/goods.wxss */
+
+.top-bar .item {
+  height: 42px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  display: none;
+}
+
+.top-bar .show {
+  display: flex;
+}
+
+.top-bar .back {
+  padding-left: 10px;
+  height: 32px;
+  width: 32px;
+  text-align: center;
+  line-height: 32px;
+  overflow: hidden;
+}
+
+.top-bar .list {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.top-bar .list .tab {
+  padding: 10px 0;
+  margin: 0 10px;
+}
+
+.top-bar .list .active {
+  color: var(--theme);
+  border-bottom: solid 2px var(--theme);
+}
+
+.buy-bar .item {
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+
+.buy-bar .hidden {
+  height: 0px;
+}
+
+.buy-bar .show {
+  height: calc(46px + constant(safe-area-inset-bottom));
+  height: calc(46px + env(safe-area-inset-bottom));
+}
+
+.buy-bar .item .ipx-safe-area {
+  height: constant(safe-area-inset-bottom);
+  height: env(safe-area-inset-bottom);
+}
+
+.buy-bar .item .list {
+  display: flex;
+  grid-template-columns: auto auto auto auto 120px 120px;
+  line-height: 46px;
+  text-align: center;
+  color: #333;
+  font-size: 18px;
+}
+
+.buy-bar .item .list .ico {
+  padding: 0 10px;
+}
+
+.buy-bar .item .list .fl {
+  flex: 1;
+}
+
+.buy-bar .item .list .buy-btn {
+  background-color: var(--theme);
+  font-size: 14px;
+  color: white;
+  width: 120px;
+}
+
+.buy-bar .item .list .cart-btn {
+  background-color: rgb(254, 222, 0);
+  font-size: 14px;
+  width: 120px;
+}
+
+.content .banner {
+  width: 100%;
+  height: 300px;
+  background-color: rgb(220, 220, 220);
+}
+
+.demo {
+  width: 100%;
+  height: 1000px;
+}

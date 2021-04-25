@@ -1,0 +1,42 @@
+/* pages/social/index/index.wxss */
+
+
+.search .item {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(245, 245, 245, 0.8);
+  font-size: small;
+  margin-right: 105px;
+  margin-left: 10px;
+  border-radius: 30px;
+  padding-left: 10px;
+}
+
+.nav-bar {
+  z-index: 1;
+  box-shadow: 0 5px 10px -10px var(--gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-bar .tab-list .tab {
+  padding: 15px;
+  display: inline-block;
+}
+
+.nav-bar .tab-list .active {
+  font-weight: bold;
+  color: black;
+}
+
+.nav-bar .tab-line {
+  background-color: rgb(254, 105, 124);
+  width: 42px;
+  height: 3px;
+  border-radius: 30px;
+  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;   
+}

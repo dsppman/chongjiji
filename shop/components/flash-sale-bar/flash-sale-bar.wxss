@@ -1,0 +1,45 @@
+/* pages/shop/components/flash-sale-bar/flash-sale-bar.wxss */
+
+.head {
+  padding: 15px 15px 0;
+  display: flex;
+  align-items: center;
+}
+
+.head .label {
+  color: black;
+  font-weight: bold;
+  margin-right: 5px;
+  white-space: nowrap;
+}
+
+.head .countdown {
+  display: flex;
+  color: rgb(242, 32, 49);
+  font-size: small;
+}
+
+.head .countdown .time {
+  background-color: rgb(242, 32, 49);
+  color: white;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0 3px;
+}
+
+.head .sub {
+  font-size: small;
+}
+
+.list {
+  height: 200px;
+}
+
+.item {
+  margin: 15px;
+  box-shadow: 0 0 20px -3px rgba(220, 220, 220, 0.8);
+  height: 150px;
+  border-radius: 10px;
+}

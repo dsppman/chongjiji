@@ -1,0 +1,18 @@
+<!--pages/shop/components/flash-sale-bar/flash-sale-bar.wxml-->
+<view class="head">
+  <view class="label">今日秒杀</view>
+  <view class="countdown">
+    <view class="time">{{hour}}</view>:
+    <view class="time">{{minute}}</view>:
+    <view class="time">{{second}}</view>:
+    <view class="time">{{millisecond}}</view>
+  </view>
+  <view class="sub">每天10点 限时限量</view>
+</view>
+<swiper circular previous-margin="30px" next-margin="30px" class="list">
+  <swiper-item wx:for="{{list}}" wx:key="index">
+    <view class="item">
+      {{index}}
+    </view>
+  </swiper-item>
+</swiper>

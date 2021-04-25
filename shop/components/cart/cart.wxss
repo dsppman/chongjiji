@@ -1,0 +1,69 @@
+/* shop/components/cart/cart.wxss */
+
+.container {
+  padding: 15px;
+  min-height: 320px;
+}
+
+.default {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+}
+
+.cart {
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px 0;
+  display: grid;
+  row-gap: 10px;
+}
+
+.cart .item {
+  display: flex;
+  align-items: center;
+}
+
+.cart .item .checkbox {
+  padding: 0 5px 0 15px;
+  border-radius: 100rpx;
+}
+
+.cart .item .pic {
+  height: 90px;
+  width: 90px;
+  background-color: rgb(220, 220, 220);
+  border-radius: 15px;
+}
+
+.cart .item .info {
+  padding: 0 15px;
+  flex: 1;
+  
+}
+
+.cart .item .info .title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  height: 42px;
+  font-size: 15px;
+}
+
+.cart .item .info .param {
+  font-size: small;
+  color: gray;
+}
+
+.cart .item .info .price {
+  color: var(--red);
+  font-weight: bold;
+}
+
+.cart .item .info .price::before {
+  content: "￥";
+  font-size: small;
+}

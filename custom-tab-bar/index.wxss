@@ -1,0 +1,117 @@
+/* custom-tab-bar/index.wxss */
+
+@import "/components/iconfont/iconfont.wxss";
+
+.tab-bar {
+  height: 52px;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  box-shadow: 0 -5px 10px -10px rgba(114, 130, 138, 0.2);
+  background: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tab-bar .item {
+  color: #999999;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-bar .item .active {
+  transform: scale(1.2);
+  color: #333333;
+}
+
+.tab-bar .item .publish {
+  background-color: rgb(254, 105, 124);
+  width: 44px;
+  height: 35px;
+  border-radius: 7px;
+  box-shadow: 2px 2px 15px -5px rgba(254, 105, 124, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.mask {
+  position: absolute;
+  top: -2000px;
+  width: 100%;
+  height: 2052px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  transition: all 0.3s;
+  transform: scale(2);
+  opacity: 0;
+}
+
+.show {
+  transform: scale(1);
+	opacity: 1;
+}
+
+.content {
+  width: 100%;
+}
+
+.content .list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.content .close {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.content .close .pic {
+  width: 36px;
+  height: 36px;
+}
+
+.mask .btn {
+  text-align: center;
+  font-weight: bold;
+  color: #333333;
+  padding: 10px;
+}
+
+.mask .btn .ico1 {
+  width: 90px;
+  height: 90px;
+  padding: 23px;
+  box-sizing: border-box;
+  background-image: linear-gradient(45deg,rgb(52,211,252), rgb(82,182,241));
+  background-color: rgb(52,211,252);
+  color: white;
+  font-size: 40px;
+  line-height: 90px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+
+.mask .btn .ico2 {
+  width: 90px;
+  height: 90px;
+  padding: 23px;
+  box-sizing: border-box;
+  background-image: linear-gradient(45deg,rgb(236,126,134), rgb(235,110,118));
+  background-color: rgb(236,126,134);
+  color: white;
+  font-size: 40px;
+  line-height: 90px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}

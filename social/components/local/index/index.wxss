@@ -1,0 +1,13 @@
+/* pages/social/components/local/index/index.wxss */
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .tips {
+  font-size: large;
+}

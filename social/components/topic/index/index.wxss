@@ -1,0 +1,140 @@
+/* pages/social/components/topic/index/index.wxss */
+
+.container {
+  height: 100%;
+}
+
+.top-bar .item {
+  height: 150px;
+  padding: 12px 17px;
+  box-sizing: border-box;
+}
+
+.top-bar .item .ads {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 5px 1px rgba(114, 130, 138, 0.2);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(114, 130, 138, 0.5);
+}
+
+.content {
+  min-height: calc(100% - 150px);
+  background-color: white;
+  border-radius: 15px 15px 0 0;
+  box-shadow: 0 -5px 10px -10px rgba(114, 130, 138, 0.5);
+}
+
+.content .nav-bar {
+  display: flex;
+  white-space: nowrap;
+  padding: 10px 12px;
+  font-size: small;
+  color: gray;
+}
+
+.content .nav-bar .item {
+  padding: 7px 15px;
+  margin-right: 10px;
+}
+
+.content .nav-bar .active {
+  font-weight: bold;
+  background-color: #f6f7f9;
+  border-radius: 30px;
+  color: black;
+}
+
+.content .list {
+  background-color: #f6f7f9;
+  display: grid;
+  gap: 7px;
+}
+
+.content .list .item {
+  padding: 17px;
+  background-color: white;
+}
+
+.content .list .item .title {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.content .list .item .info {
+  font-size: smaller;
+  color: gray;
+}
+
+.content .list .item .comment {
+  font-size: small;
+  color: gray;
+  margin: 10px 0;
+}
+
+.content .list .item .comment .avatar {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  margin-right: 5px;
+  float: left;
+}
+
+.content .list .item .comment .username {
+  color: black;
+  font-weight: bold;
+  float: left;
+}
+
+.content .list .item .comment-pic {
+  display: flex;
+}
+
+.content .list .item .comment-pic .pic {
+  margin: 3px;
+  border-radius: 5px;
+  width: 33%;
+  height:30vw;
+}
+
+.content .list .item .comment-pic .only {
+  width: 100%;
+  height:40vw;
+}
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+}
+
+
+/* 动画 */
+.loading {
+  width: 25px;
+  height: 25px;
+  background-color: grey;
+  animation: sk-plane 1.2s infinite ease-in-out;
+}
+
+.finish {
+  width: 25px;
+  height: 25px;
+  background-color: pink;
+}
+
+@keyframes sk-plane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg); 
+  } 50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); 
+  } 100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); 
+  } 
+}

@@ -1,0 +1,20 @@
+<!--shop/components/cart/cart.wxml-->
+<view class="container">
+  <view class="cart" wx:if="{{list.length > 0}}">
+    <view class="item" wx:for="{{list}}">
+      <checkbox class="checkbox" />
+      <view class="pic"></view>
+      <view class="info">
+        <view class="title">我是一个大标题我是一个大标题我是一个大标题我是一个大标题</view>
+        <view class="param">{{item.id}}</view>
+        <view class="box">
+          <view class="price">99</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="default" wx:else>
+    <image src="/images/404.png" mode="aspectFit" />
+    <text>您的购物车啥也没有，啥也不是</text>
+  </view>
+</view>

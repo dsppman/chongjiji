@@ -1,0 +1,5 @@
+<!--pages/social/components/local/index/index.wxml-->
+<view class="container">
+  <icon type="cancel" size="200rpx" />
+  <view class="tips">此功能正在维护中</view>
+</view>
